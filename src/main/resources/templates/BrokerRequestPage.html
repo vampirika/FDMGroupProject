@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h1> Requests</h1>
+
+<div>
+			<table>
+
+				<tr th:each="share : ${shares}">
+					<td th:text="|${share.name} ${share.currency} ${share.price} ${share.quantity}|" />
+
+					<td><label for="cb">Accept </label><input type="checkbox"
+						id="cb" name="cb" th:value="${share.shareId} " /></td>
+					
+				</tr>
+			</table>
+			<input type="accept" value="Accept">
+		</div>
+
+
+
+
+</body>
+</html>

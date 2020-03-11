@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Corona</title>
+<link rel="stylesheet" href="loginPage.css" />
+</head>
+<body>
+	<div class="wrapper">
+		<div class="left">
+			<h3>
+				<a href="/">CORONA </a>
+			</h3>
+			<img src="corona.jpg" alt="Corona">
+		</div>
+		<div class="right">
+			<form class="box" action="#" th:action="@{/pageRedirect}"
+				method="post">
+				<div>
+					<h3>Login to Corona</h3>
+				</div>
+				
+				<div class ="warning">
+					<h4>Wrong Credentials</h4>
+				</div>
+				
+				<div class="login">
+					<div class="input_field">
+						<input type="text" placeholder="Username" class="input"
+							name="username">
+					</div>
+					<div class="input_field">
+						<input type="password" placeholder="Password" class="input"
+							name="password">
+					</div>
+					<div>
+						<input type="submit" value="Login">
+					</div>
+					<div>
+						<input type="reset" value="Reset">
+					</div>
+				</div>
+			</form>
+
+		</div>
+	</div>
+
+
+</body>
+</html>

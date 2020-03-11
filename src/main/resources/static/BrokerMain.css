@@ -1,0 +1,35 @@
+@charset "ISO-8859-1";
+
+.page-container{
+margin:50px;
+display:grid;
+grid-template-columns: 1fr; 
+grid-template-rows: 30% 70%;
+grid-template-areas:"pageHeader"
+                    "btn-group";
+}
+.header{
+	grid-area:pageHeader;	
+	text-align: center;
+
+}
+.btn-group .button{
+	 color:black;
+	  grid-area:btn-group;	
+	  text-align: center;
+	  text-decoration: none;
+	  cursor: pointer;
+	  display: block;
+	    padding: 15px 32px;
+  font-size: 16px;
+  margin: 4px 2px;
+}
+.btn-group .button:hover {
+  background-color: grey;
+}
+.button {
+
+  border: none;
+
+
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" href="BrTradePage.css" />
+<meta charset="ISO-8859-1">
+<title>BrokerTradePage</title>
+</head>
+<body>
+  <div class = "page-container">
+    <div class = "header">
+      <p class = "nameTag">All Trades</p>
+      <p th:text = "|Loged in as & ${userName.username}|"></p>
+		<a href = "Broker" class = "button">Back</a>
+</div>
+<table class = "trades-table">
+<thead>
+<tr>
+<th class = "tbNaming">Trade Id</th>
+<th class = "tbNaming">Share Id</th>
+<th class = "tbNaming">Stock Ex</th>
+<th class = "tbNaming">Order Date</th>
+<th class = "tbNaming">Share amount</th>
+<th class = "tbNaming">Price Total</th>
+
+</tr></thead>
+<tbody>
+<tr th:each="trade : ${trades}">
+<td class="tbCell" th:text="${trade.tradeId}"></td>
+<td class="tbCell" th:text="${trade.theShare}"></td>
+<td class="tbCell" th:text="${trade.se}"></td>
+<td class="tbCell" th:text="${trade.orderDate}"></td>
+
+<!--doesnt work, clash with db  <td class="tbCell" th:text="${trade.shareAmount}"></td>-->
+
+<td class="tbCell" th:text="${trade.priceTotal}"></td>
+</tr>
+</tbody>
+</table>
+
+  </div>
+</body>
+</html>

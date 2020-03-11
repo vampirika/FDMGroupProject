@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="shareholder.css" />
+<link rel="stylesheet" href="style.css" />
+<head>
+<meta charset="ISO-8859-1">
+<title>Shareholder</title>
+</head>
+<body>
+
+	<div class="wrapper">
+		<div class="sidebar">
+			<h3 th:text = "|Logged in as ${userName.username}|"></h3>
+			<ul>
+				<li><a href="/ViewShares">View Shares</a></li>
+
+				<li><a href="/ShareholderTransactions">View Transaction</a></li>
+
+				<li><a href="/ViewPortfolio">View Portfolio</a></li>
+
+				<li><a href="/Wallet">View Wallet</a></li>
+				
+
+
+
+			</ul>
+
+		</div>
+		<div class="main_content">
+			<div>
+				<h1>Welcome Shareholder!!</h1>
+			</div>
+
+			<div class="page-container">
+				<div class="row">
+					<div class="col col1 box2">
+						<h1>All Shares</h1>
+					</div>
+
+				</div>
+
+
+				<div class="row">
+					<table class="sharesList">
+
+						<tr class="tablehead">
+							<th>Share</th>
+							<th>Price</th>
+							<th>Currency</th>
+						</tr>
+
+						<tr>
+							<td th:each="share : ${shares}" th:text="${share.name}"></td>
+							<td th:each="share : ${shares}" th:text="${share.price}" ></td>
+							<td th:each="share : ${shares}"
+									th:text="${share.currency}"></td>
+						</tr>
+
+					</table>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+
+
+</body>
+</html>

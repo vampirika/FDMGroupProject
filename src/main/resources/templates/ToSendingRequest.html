@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" href="home.css" />
+<meta charset="ISO-8859-1">
+<title>Corona</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="page-container">
+	<div class="row">
+		<div class="col box3">
+			<h1><a href="/">Corona</a></h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col col3 box2">
+			<h1></h1>
+		</div>
+		<div class="col col3 box1">
+			<div class="row">
+				<h3>Request roles</h3>
+			</div>
+			<div class="row">
+				<form action="#" th:action="@{/sendRequest}" method="post">
+    				<p>Please enter your Username: <input type="text"  name="userName"/></p><!-- th:value="*{userName}" -->
+        			<p>Which role are you requesting?: <input type="text" th:value="*{userType}" name="userType"/></p>
+ 					<p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+    			</form>
+			</div>
+		</div>
+		<div class="col col3 box2">
+		</div>
+	</div>
+</div>
+</body>
+</html>

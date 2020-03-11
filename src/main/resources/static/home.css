@@ -1,0 +1,45 @@
+@charset "ISO-8859-1";
+
+.page-container {
+	margin: 0 auto;
+}
+
+.row {
+	clear: both;
+	padding: 0 0 0 1%; /* THAT'S THE NAME ;) */
+}
+.col {
+	float: left;
+	margin: 0 0% 0 0;
+}
+.last-col {
+	margin: 0;
+}
+
+.col1 { width: 75%; }
+.col2 { width: 10%; }
+.col3 { width: 30%; }
+.col4 { width: 60%; }
+.col5 { width: 99%; }
+.box1 {
+	border: solid 2px black;
+	background: white;
+	text-align: center;
+	background:dodgerblue;
+	padding:5px;
+}
+.box2 {
+	border: none;
+	background: white;
+	text-align: left;
+}
+.box3 {
+	border: none;
+	background: white;
+	text-align: center;
+}
+.box3 {
+	border: none;
+	background: white;
+	text-align: right;
+}

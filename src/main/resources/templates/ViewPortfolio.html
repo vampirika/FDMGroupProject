@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="shareholder.css" />
+<head>
+<meta charset="ISO-8859-1">
+<title>Portfolio</title>
+</head>
+<body>
+	<div class="page-container">
+		<div class="row">
+			<div class="col col1 box2">
+				<h1>Current Shares</h1>
+			</div>
+
+			<div class="col col2 box1">
+				<h2>
+					<a href="Shareholder">Back to Dash</a>
+				</h2>
+			</div>
+
+			<div class="col col2 last-col box1">
+				<h2>
+					<a href="Wallet">View Wallet</a>
+				</h2>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col col1">
+				<h3>
+					<a href="ViewShares">View All Shares</a>
+				</h3>
+				<h3>
+					<a href="ShareholderTransactions">View Transactions</a>
+				</h3>
+				<h3>Viewing owned Shares:</h3>
+			</div>
+		</div>
+
+
+		<div class="row">
+			<table class="sharesPortfolio">
+
+				<tr class="tablehead">
+					<th>Share</th>
+					<th>Price</th>
+					<th>Quantity</th>
+				</tr>
+
+				<tr>
+					<td>Test Share 1</td>
+
+					<!-- Add th:text="${shareprice.price}" in place of static number -->
+					<td>$77.42</td>
+					<td>103</td>
+				</tr>
+
+				<tr>
+					<td>Test Share 2</td>
+
+					<!-- Add th:text="${shareprice.price}" in place of static number -->
+					<td>$202.73</td>
+					<td>21</td>
+				</tr>
+
+				<tr>
+					<td>Test Share 3</td>
+
+					<!-- Add th:text="${shareprice.price}" in place of static number -->
+					<td>$2,470.06</td>
+					<td>3</td>
+				</tr>
+
+				<tr>
+					<td>Test Share 4</td>
+
+					<!-- Add th:text="${shareprice.price}" in place of static number -->
+					<td>$317.40</td>
+					<td>30</td>
+				</tr>
+
+			</table>
+		</div>
+	</div>
+
+</body>
+</html>

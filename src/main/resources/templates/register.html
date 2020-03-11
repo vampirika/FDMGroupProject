@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" href="registration.css" />
+<meta charset="ISO-8859-1">
+<title>Corona</title>
+
+</head>
+<body>
+	<div class="wrapper">
+		<div class="left">
+			<h3>
+				<a href="/">CORONA </a>
+			</h3>
+			<img src="corona.jpg" alt="Corona">
+		</div>
+		<div class="right">
+			<form class="box" action="#" th:action="@{/registerNewUser}"
+				method="post">
+				<div class="login">
+					<div class="input_field">
+						<input type="text" placeholder="Username" class="input50"
+							name="userName" required> <input type="password"
+							placeholder="Password" class="input50" name="password" required>
+					</div>
+					<div class="input_field">
+						<input class="input" type="text" name="name"
+							placeholder="Full Name" required />
+
+					</div>
+
+					<div class="input_field">
+						<input class="input" type="text" name="country"
+							placeholder="Country" required /> 
+							<select class="input"
+							name="userType" required>
+
+
+							<option th:each="s:${enums}" th:value="${s}" th:text="${s}">
+						</select>
+
+					</div>
+
+					<div>
+						<input type="submit" value="Register">
+					</div>
+					<div>
+						<input type="reset" value="Reset" />
+					</div>
+				</div>
+
+
+
+			</form>
+		</div>
+	</div>
+
+</body>
+</html>

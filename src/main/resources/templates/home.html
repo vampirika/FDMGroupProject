@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" href="registration.css" />
+<meta charset="ISO-8859-1">
+<title>Corona</title>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="left">
+			<h3>
+				<a href="/">CORONA </a>
+			</h3>
+			<img src="corona.jpg" alt="Corona">
+		</div>
+		<div class="right">
+			<form class="box" action="#" th:action="@{/registerNewUser}"
+				method="post">
+				<div class="login">
+					<div>
+						<h3>Welcome to our amazing trading platform</h3>
+					</div>
+
+					<div>
+						<div class="btn">
+							<a href="/login">Login</a>
+						</div>
+					</div>
+					<div>
+						<div class="btn">
+							<a href="/register">Register</a>
+						</div>
+					</div>
+				</div>
+
+
+
+			</form>
+
+		</div>
+	</div>
+
+</body>
+</html>
